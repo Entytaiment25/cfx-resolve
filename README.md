@@ -12,4 +12,17 @@ To run:
 bun run src/index.ts
 ```
 
-This project was created using `bun init` in bun v1.2.4. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+### Usage Example
+
+```typescript
+import { resolveCfxReIp } from "./src/index";
+
+const url = "cfx.re/join/mockServer";
+resolveCfxReIp(url)
+  .then((ip) => {
+    console.log(ip); // Output: "127.0.0.1:30120"
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+```
